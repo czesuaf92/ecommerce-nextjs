@@ -17,14 +17,14 @@ const getProducts = async () => {
 };
 
 const Products = async () => {
-    const products = await getProducts();
+    const products = await fetch('http://localhost:3000/api/products').then((res) => res.json());
 
     if (!products) {
         return {
             notFound: true,
         };
     }
-    // console.log("🚀 ~ Products ~ products:", products);
+
     return (
         <div>
             <h1 className='text-5xl'>
