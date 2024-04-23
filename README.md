@@ -1,3 +1,21 @@
+## To Do list
+
+- Layout
+  - [x] Desktop menu
+  - [] Mobile menu
+  - [] Footer
+- Pages
+  - [] Home
+  - [] Products
+  - [] SingleProduct
+  - [] AboutUs
+  - [] Contact
+  - [] Cart
+  - [] Profile
+- [] Auth
+- [] Search logic
+- [] Filters
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
