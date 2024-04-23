@@ -5,12 +5,12 @@ const AdditionalMenu = () => {
   return (
     <ul className='flex items-center gap-2'>
       <li>
-        <Link href="/cart" className='block p-2'>
+        <Link href="/cart" className='block p-2' aria-label="Cart">
           <IoCartOutline className='size-8' />
         </Link>
       </li>
       <li>
-        <Link href="/profile" className='block p-2'>
+        <Link href="/profile" className='block p-2' aria-label='Profile'>
           <IoPersonOutline className='size-8' />
         </Link>
       </li>
