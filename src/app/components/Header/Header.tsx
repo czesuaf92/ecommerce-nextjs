@@ -1,8 +1,12 @@
-import React from 'react';
-import Logo from './Logo';
+'use client';
+import { useState } from 'react';
 import DesktopMenu from './DesktopMenu';
+import Hamburger from './Hamburger';
+import Logo from './Logo';
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   return (
     <header
       id="page-header"
@@ -11,8 +15,11 @@ const Header = () => {
       <div className="container px-4 lg:px-8 xl:max-w-7xl">
         <div className="flex justify-between py-4">
           <Logo />
-          <DesktopMenu />
+          <DesktopMenu>
+            <Hamburger setIsMobileNavOpen={setIsMobileNavOpen} />
+          </DesktopMenu>
         </div>
+        <MobileMenu isMobileNavOpen={isMobileNavOpen} />
       </div>
 
     </header>

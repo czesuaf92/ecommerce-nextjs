@@ -1,10 +1,11 @@
 'use client';
 import { Menu, Transition } from '@headlessui/react';
-import React, { Fragment } from 'react';
-import { MenuItemProps } from './menuItems';
-import Link from 'next/link';
 import { cva } from 'class-variance-authority';
-import { HiMiniInbox, HiMiniFlag, HiMiniUserCircle, HiMiniCog6Tooth, HiMiniLockClosed } from "react-icons/hi2";
+import Link from 'next/link';
+import { Fragment } from 'react';
+import { HiMiniChevronDown, HiMiniCog6Tooth, HiMiniFlag, HiMiniInbox, HiMiniLockClosed, HiMiniUserCircle } from "react-icons/hi2";
+
+import { MenuItemProps } from './menuItems';
 
 interface UserMenuItemProps extends MenuItemProps {
   counter?: number;
@@ -50,19 +51,7 @@ const UserMenu = () => {
 
       <Menu.Button className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm focus:ring focus:ring-gray-300/25 active:border-gray-200 active:shadow-none">
         <span>John</span>
-        <svg
-          className="hi-mini hi-chevron-down inline-block size-5 opacity-40"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <HiMiniChevronDown className="inline-block size-5 opacity-40" />
       </Menu.Button>
       <Transition
         as={Fragment}
