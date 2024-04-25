@@ -29,8 +29,13 @@ export default function RootLayout({
           className="mx-auto flex min-h-dvh w-full min-w-[320px] flex-col bg-gray-100"
         >
           <Header />
-          {/* <OldHeader /> */}
-          {children}
+          <main id="page-content" className="flex max-w-full flex-auto flex-col">
+            <div className="container mx-auto p-4 lg:p-8 xl:max-w-7xl">
+              <div className="flex items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 py-64 text-gray-400">
+                {children}
+              </div>
+            </div>
+          </main>
           <Footer />
         </div>
       </body >

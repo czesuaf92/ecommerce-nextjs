@@ -13,8 +13,8 @@ interface UserMenuItemProps extends MenuItemProps {
 const userMenuItemStyles = cva("group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium", {
   variants: {
     active: {
-      true: "bg-blue-50 text-blue-800",
-      false: "text-gray-700 hover:bg-blue-50 hover:text-blue-800 active:border-blue-100"
+      true: "bg-orange-50 text-orange-800",
+      false: "text-gray-700 hover:bg-orange-50 hover:text-orange-800 active:border-orange-100"
     }
   }
 });
@@ -32,7 +32,7 @@ const UserMenuItem = ({ href, label, Icon, counter }: UserMenuItemProps) => {
             <span className="grow">{label}</span>
             {
               counter && (
-                <div className="inline-flex rounded-full border border-blue-200 bg-blue-100 px-1.5 py-0.5 text-xs font-semibold leading-4 text-blue-700">
+                <div className="inline-flex rounded-full border border-orange-200 bg-orange-100 px-1.5 py-0.5 text-xs font-semibold leading-4 text-orange-700">
                   {counter}
                 </div>
               )
