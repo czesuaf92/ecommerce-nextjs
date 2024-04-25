@@ -2,8 +2,8 @@
 
 - Layout
   - [x] Desktop menu
-  - [] Mobile menu
-  - [] Footer
+  - [x] Mobile menu
+  - [x] Footer
 - Pages
   - [] Home
   - [] Products
