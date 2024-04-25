@@ -10,5 +10,12 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+  },
 }

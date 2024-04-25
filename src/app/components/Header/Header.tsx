@@ -1,22 +1,27 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client';
+import { useState } from 'react';
 import DesktopMenu from './DesktopMenu';
-import Search from './Search';
-import AdditionalMenu from './AdditionalMenu';
-
+import Hamburger from './Hamburger';
+import Logo from './Logo';
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   return (
-    <header className='lg:container bg-white px-2 lg:px-4 lg:py-4 py-2'>
-      <nav className='flex items-center'>
-        <Link href="/">
-          <Image src="https://placehold.co/160x62" alt="logo" width={160} height={62} />
-        </Link>
+    <header
+      id="page-header"
+      className="z-1 flex flex-none items-center bg-white shadow-sm"
+    >
+      <div className="container px-4 lg:px-8 xl:max-w-7xl">
+        <div className="flex justify-between py-4">
+          <Logo />
+          <DesktopMenu>
+            <Hamburger setIsMobileNavOpen={setIsMobileNavOpen} />
+          </DesktopMenu>
+        </div>
+        <MobileMenu isMobileNavOpen={isMobileNavOpen} />
+      </div>
 
-        <DesktopMenu />
-        <Search />
-        <AdditionalMenu />
-      </nav>
     </header>
   );
 };
