@@ -1,22 +1,20 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
+import Logo from './Logo';
 import DesktopMenu from './DesktopMenu';
-import Search from './Search';
-import AdditionalMenu from './AdditionalMenu';
-
 
 const Header = () => {
   return (
-    <header className='lg:container bg-white px-2 lg:px-4 lg:py-4 py-2'>
-      <nav className='flex items-center'>
-        <Link href="/">
-          <Image src="https://placehold.co/160x62" alt="logo" width={160} height={62} />
-        </Link>
+    <header
+      id="page-header"
+      className="z-1 flex flex-none items-center bg-white shadow-sm"
+    >
+      <div className="container px-4 lg:px-8 xl:max-w-7xl">
+        <div className="flex justify-between py-4">
+          <Logo />
+          <DesktopMenu />
+        </div>
+      </div>
 
-        <DesktopMenu />
-        <Search />
-        <AdditionalMenu />
-      </nav>
     </header>
   );
 };
