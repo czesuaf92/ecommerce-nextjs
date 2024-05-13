@@ -3,18 +3,19 @@ import { wooApi } from 'utils/wooCommerceApi';
 export async function GET() {
     try {
         const response = await wooApi.get("products");
-        if (response.data) {
-            return new Response(JSON.stringify(response.data), {
-                status: 200,
+
+        if (!response.data && response.status !== 200) {
+            return new Response(`Something went wrong: ${response.statusText}`, {
+                status: response.status,
             });
         }
 
-        throw new Response(`ERROR: ${response.statusMessage}`, {
-            status: response.status,
+
+        return new Response(JSON.stringify(response.data), {
+            status: 200,
         });
+
     } catch (error) {
-        throw new Response(`ERROR: ${error}`, {
-            status: 500,
-        });
+        throw new Error(`Something went wrong: ${error}`);
     }
-}
+};

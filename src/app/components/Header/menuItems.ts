@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-import { GiCandlebright } from "react-icons/gi";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 
 export type MenuItemProps = {
@@ -11,8 +10,7 @@ export type MenuItemProps = {
 export const MAIN_MENU_ITEMS: MenuItemProps[] = [
   {
     href: "/products",
-    label: "Świeczki",
-    Icon: GiCandlebright
+    label: "Produkty",
   },
   {
     href: '/about-us',
