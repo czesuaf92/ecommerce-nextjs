@@ -1,24 +1,13 @@
 
-import React, { Suspense } from 'react';
-import { wooApi } from 'utils/wooCommerceApi';
-import ProductsList from './_components/ProductsList';
-
-const getProducts = async () => {
-    try {
-        const response = await wooApi.get("products");
-        if (response.data) {
-            return response.data;
-        }
-
-        throw new Error(`ERROR: ${response.statusMessage}`);
-    } catch (error) {
-        console.error("🚀 ~ getProducts ~ error:", error);
-    }
-};
+import Pagination from 'app/components/Pagination/Pagination';
+import ProductsList from 'app/components/ProductsList/ProductsList';
+import { Product } from 'app/types/wooCommerce';
 
 const Products = async () => {
-    const products = await fetch('http://localhost:3000/api/products').then((res) => res.json());
-
+    const products: Product[] = await fetch('http://localhost:3000/api/products', { next: { revalidate: 1 } }).then((res) => {
+        return res.json();
+    });
+    console.log("🚀 ~ products ~ products:", products);
     if (!products) {
         return {
             notFound: true,
@@ -27,15 +16,11 @@ const Products = async () => {
 
     return (
         <div>
-            <h1 className='text-5xl'>
-
-                Products
+            <h1 className='text-5xl font-bold'>
+                Produkty
             </h1>
-
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <ProductsList products={products} />
-            </Suspense>
+            <ProductsList products={products} />
+            <Pagination />
         </div>
 
     );
