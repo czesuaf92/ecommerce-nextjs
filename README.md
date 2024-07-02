@@ -7,6 +7,10 @@
 - Pages
   - [] Home
   - [] Products
+    - [x] Products list
+    - [] Pagination
+    - [] Search
+    - [] Filters
   - [] SingleProduct
   - [] AboutUs
   - [] Contact
@@ -14,7 +18,7 @@
   - [] Profile
 - [] Auth
 - [] Search logic
-- [] Filters
+- [] Filters Logic
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
