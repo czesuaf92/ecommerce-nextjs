@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { HiMenu } from 'react-icons/hi';
 
-type HamburgerProps = {
+interface HamburgerProps {
   setIsMobileNavOpen: Dispatch<SetStateAction<boolean>>;
 };
 

@@ -11,7 +11,8 @@
     - [] Pagination
     - [] Search
     - [] Filters
-  - [] SingleProduct
+  - [x] SingleProduct
+  - [] Breadcrumbs
   - [] AboutUs
   - [] Contact
   - [] Cart

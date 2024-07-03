@@ -7,6 +7,7 @@ import MobileMenu from './MobileMenu';
 
 const Header = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   return (
     <header
       id="page-header"

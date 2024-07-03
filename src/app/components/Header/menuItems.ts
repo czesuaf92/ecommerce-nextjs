@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 
-export type MenuItemProps = {
+export interface MenuItemProps {
   href: string;
   label: string;
   Icon?: IconType;
