@@ -28,7 +28,7 @@ const MobileMenuItem = ({ href, label, Icon }: MenuItemProps) => {
   );
 };
 
-type MobileMenuProps = {
+interface MobileMenuProps {
   isMobileNavOpen: boolean;
 };
 
